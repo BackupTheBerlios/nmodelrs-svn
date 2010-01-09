@@ -1,0 +1,6 @@
+/r:..\\bin\\ATM.dll
+/fsm:fsm_card1.txt
+/fsm:fsm_cash.txt
+/fsm:fsm_amount.txt
+ATM.Factory.CreatePinOkDeterministic
+/file:testsuite_card1.txt

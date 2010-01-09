@@ -1,0 +1,4 @@
+﻿FSM(0, AcceptingStates(0), Transitions(
+t(0, custEnterAmountW(100), 0),
+t(0, custEnterAmountT(100000), 0)
+))
