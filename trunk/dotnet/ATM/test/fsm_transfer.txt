@@ -1,0 +1,27 @@
+﻿FSM(0, AcceptingStates(0),Transitions(
+t(0, setCash_Start(10), 0),
+t(0, custInsertCard_Start(1), 0),
+t(0, custEnterPin_Start(42), 0),
+t(0, custSelectTrans_Start(TRANS_TYPE("TRANSFER")), 1),
+t(1, custSelectTrans_Finish(MSG("SELECT_FROM_ACCT")), 2),
+t(2, custSelectAcct_Start(ACCT_TYPE("SAVINGS")), 3),
+t(3, custSelectAcct_Finish(MSG("SELECT_TO_ACCT")), 4),
+t(4, custSelectAcct_Start(ACCT_TYPE("CHECKING")), 5),
+t(5, custSelectAcct_Finish(MSG("ENTER_AMOUNT")), 6),
+t(6, custEnterAmountT(100000), 7),
+t(7, doTransaction(true), 0),
+t(2, custSelectAcct_Start(ACCT_TYPE("MONEYMARKET")), 13),
+t(13, custSelectAcct_Finish(MSG("SELECT_TO_ACCT")), 14),
+t(14, custSelectAcct_Start(ACCT_TYPE("CHECKING")), 5),
+t(2, custSelectAcct_Start(ACCT_TYPE("CHECKING")), 23),
+t(23, custSelectAcct_Finish(MSG("SELECT_TO_ACCT")), 24),
+t(24, custSelectAcct_Start(ACCT_TYPE("MONEYMARKET")), 5),
+t(2, custSelectAcct_Start(ACCT_TYPE("MONEYMARKET")), 33),
+t(33, custSelectAcct_Finish(MSG("SELECT_TO_ACCT")), 34),
+t(34, custSelectAcct_Start(ACCT_TYPE("MONEYMARKET")), 5)
+),Vocabulary("setCash_Start","custInsertCard_Start","custEnterPin_Start",
+  "custSelectTrans_Start","custSelectTrans_Finish",
+  "custSelectAcct_Start","custSelectAcct_Finish",
+  "custEnterAmountT","doTransaction",
+"custCancelTrans_Start","custCancel","switchOff_Start"
+))

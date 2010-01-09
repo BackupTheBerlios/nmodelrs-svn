@@ -1,0 +1,6 @@
+/r:..\\bin\\ATM.dll
+ATM.Factory.CreatePinOkDeterministic
+/fsm:fsm_card1.txt
+/fsm:fsm_cash.txt
+/fsm:fsm_amount.txt
+/maxTransitions:5000

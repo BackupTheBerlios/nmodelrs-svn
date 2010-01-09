@@ -1,0 +1,7 @@
+To use the libraries and run the examples you need to install
+ 
+- Microsoft .NET Framework v3.5
+- NModel from http://nmodel.codeplex.com/
+- Java 1.5 (or later) runtime
+
+and put their binaries on the path.
