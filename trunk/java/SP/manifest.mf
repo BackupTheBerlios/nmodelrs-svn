@@ -1,5 +1,0 @@
-Manifest-Version: 1.0
-X-COMMENT: Main-Class will be added automatically by build
-
-Name: dk/hippogrif/nmodel/ex/sp
-Version: 1.0.0
