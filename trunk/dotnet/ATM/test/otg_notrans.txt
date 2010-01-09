@@ -1,5 +1,0 @@
-/r:..\\bin\\ATM.dll
-ATM.Factory.CreateNoTransactions
-/fsm:fsm_card1.txt
-/fsm:fsm_cash.txt
-/file:testsuite_notrans.txt
