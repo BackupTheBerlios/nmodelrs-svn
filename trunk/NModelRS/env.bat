@@ -1,0 +1,1 @@
+path=C:\WINDOWS\Microsoft.NET\Framework\v3.5;c:\Program Files\NModel\bin;%path%

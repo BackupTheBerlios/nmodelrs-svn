@@ -1,0 +1,4 @@
+/r:..\\bin\\ATM.dll
+ATM.Factory.Create
+/fsm:fsm_card1.txt
+/fsm:fsm_transfer.txt
