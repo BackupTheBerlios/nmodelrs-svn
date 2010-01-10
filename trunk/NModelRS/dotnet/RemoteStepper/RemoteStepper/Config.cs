@@ -21,31 +21,33 @@ namespace RemoteStepper
 {
     /**
      * <summary>
-     * Configures remote stepper from XML file "RemoteStepper.dll.conf" in same
-     * directory as RemoteStepper.dll. 
+     * Configures remote stepper from XML file <i>RemoteStepper.dll.conf</i> in same
+     * directory as <i>RemoteStepper.dll</i>. 
      * <para>If the conf file (shown below) is not present the following default values are used</para>
      * <code>
-     * <configuration>
-     *   <port>4711</port>
-     *   <host>127.0.0.1</host>
-     *   <asyncPort>4712</asyncPort>
-     *   <bufferSize>1024</bufferSize>
-     *   <delayReset>True</delayReset>
-     *   <logEnabled>False</logEnabled>
-     * </configuration>
+     * &lt;configuration&gt;
+     *     &lt;port&gt;4711&lt;/port&gt;
+     *     &lt;host&gt;127.0.0.1&lt;/host&gt;
+     *     &lt;asyncPort&gt;4712&lt;/asyncPort&gt;
+     *     &lt;bufferSize&gt;1024&lt;/bufferSize&gt;
+     *     &lt;delayReset&gt;True&lt;/delayReset&gt;
+     *     &lt;logEnabled&gt;False&lt;/logEnabled&gt;
+     * &lt;/configuration&gt;
      * </code>
-     * <list>
-     * <description><see cref="Stepper"/>opens a TCP connection to host:port.</description>
-     * <description><see cref="AsyncStepper"/>listens on asyncPort.</description>
-     * <description>bufferSize must be able to hold any received message or datagram.</description>
-     * <description>Reset after test case may be delayed until start of next test case.</description>
-     * <description>activity is logged on console iff logEnabled is True.</description>
+     * <list type="bullet">
+     * <item><see cref="Stepper"/> opens a TCP connection to <c>host:port</c>.</item>
+     * <item><see cref="AsyncStepper"/> listens on <c>asyncPort</c>.</item>
+     * <item><c>bufferSize</c> must be able to hold any received message or datagram.</item>
+     * <item><c>Reset</c> after test case may be delayed until start of next test case.</item>
+     * <item>activity is logged on console iff <c>logEnabled</c> is True.</item>
      * </list>
      * </summary>
      * <remarks>
+     * <para>
      * RemoteStepper is a <a href="http://nmodel.codeplex.com/">NModel</a> stepper 
      * supporting remote test harness in other languages,
-     * e.g., <a href="dk.hippogrif/sw/nmodel">Java</a>.
+     * e.g., Java, see <a href="http://hippogrif.dk/sw/nmodel">NModelRS</a>.
+     * </para>
      * </remarks>
      */
     static class Config

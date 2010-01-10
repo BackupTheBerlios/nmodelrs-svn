@@ -23,7 +23,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("ATM")]
 [assembly: AssemblyDescription("NModel model of ATM")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("dk.hippogrif/sw/nmodel")]
+[assembly: AssemblyCompany("hippogrif.dk/sw/nmodel")]
 [assembly: AssemblyProduct("ATM")]
 [assembly: AssemblyCopyright("Copyright © Jesper Gørtz 2010")]
 [assembly: AssemblyTrademark("")]

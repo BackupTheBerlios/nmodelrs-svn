@@ -25,19 +25,21 @@ namespace RemoteStepper
 {
     /**
      * <summary>
-     * Transmits synchronous steps over TCP to a remote stepper <see cref="Stepper"/>
+     * Transmits synchronous steps over TCP to a remote stepper, see <see cref="Stepper"/>,
      * and receives asynchronous atomic actions as UDP datagrams. 
-     * <para>Datagrams are strings in UTF-8 (without nl char termination).</para>
-     * <para>Actions are transmitted in their string representation.</para>
+     * <list type="bullet">
+     * <item>The datagrams are strings in UTF-8 (without nl char termination).</item>
+     * <item>Actions are transmitted in their string representation.</item>
+     * </list>
      * <para>For configuration see <see cref="Config"/>.</para>
      * </summary>
      * <remarks>
      * <para>
      * RemoteStepper is a <a href="http://nmodel.codeplex.com/">NModel</a> stepper 
      * supporting remote test harness in other languages,
-     * e.g., <a href="dk.hippogrif/sw/nmodel">Java</a>.
+     * e.g., Java, see <a href="http://hippogrif.dk/sw/nmodel">NModelRS</a>.
      * </para>
-     * <para>Configure NModel ct with /r:RemoteStepper.dll /iut:RemoteStepper.AsyncStepper.Create</para>
+     * <para>Configure NModel ct with <c>/r:RemoteStepper.dll /iut:RemoteStepper.AsyncStepper.Create</c></para>
      * </remarks>
      */
     class AsyncStepper : Stepper, IAsyncStepper
@@ -45,6 +47,7 @@ namespace RemoteStepper
         ObserverDelegate observer;
         Thread svthread;
 
+        /// <summary/>
         public void SetObserver(ObserverDelegate observer)
         {
             this.observer = observer;
@@ -82,6 +85,7 @@ namespace RemoteStepper
             }
         }
 
+        /// <summary/>
         new public static IAsyncStepper Create()
         {
             return new AsyncStepper();

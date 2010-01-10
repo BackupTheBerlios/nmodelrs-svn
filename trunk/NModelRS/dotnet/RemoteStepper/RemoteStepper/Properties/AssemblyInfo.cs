@@ -23,7 +23,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("RemoteStepper")]
 [assembly: AssemblyDescription("NModel stepper for remote test harness")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("dk.hippogrif/sw/nmodel")]
+[assembly: AssemblyCompany("hippogrif.dk/sw/nmodel")]
 [assembly: AssemblyProduct("RemoteStepper")]
 [assembly: AssemblyCopyright("Copyright © Jesper Gørtz 2010")]
 [assembly: AssemblyTrademark("")]

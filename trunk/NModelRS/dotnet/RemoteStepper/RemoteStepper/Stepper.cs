@@ -22,25 +22,25 @@ namespace RemoteStepper
     /**
      * <summary>
      * Transmits synchronous steps over TCP to a remote stepper. 
-     * <para>Messages are strings in UTF-8 terminated by a nl char.</para>
      * <list type="bullet">
-     * <description>Actions are transmitted in their string representation.</description>
-     * <description>An empty reply consisting of a single nl char is interpreted as a null reply.</description>
-     * <description>A reply starting with "Exception: " is interpreted to be followed by a text
-     * to be thrown in an exception.</description>
-     * <description>Reset sends the message "RESET\n", possibly delayed until next action, and expects an empty reply.</description>
+     * <item>Messages are strings in UTF-8 terminated by a nl char.</item>
+     * <item>Actions are transmitted in their string representation.</item>
+     * <item>An empty reply consisting of a single nl char is interpreted as a null reply.</item>
+     * <item>A reply starting with "<c>Exception: </c>" is interpreted to be followed by a text
+     * to be thrown in an exception.</item>
+     * <item>Reset sends the message "<c>RESET\n</c>", possibly delayed until next action, and expects an empty reply.</item>
      * </list>
      * <para>For configuration see <see cref="Config"/>.</para>
-     * <seealso cref="AsyncStepper"/>
      * </summary>
      * <remarks>
      * <para>
      * RemoteStepper is a <a href="http://nmodel.codeplex.com/">NModel</a> stepper 
      * supporting remote test harness in other languages,
-     * e.g., <a href="dk.hippogrif/sw/nmodel">Java</a>.
+     * e.g., Java, see <a href="http://hippogrif.dk/sw/nmodel">NModelRS</a>.
      * </para>
-     * <para>Configure NModel ct with /r:RemoteStepper.dll /iut:RemoteStepper.AsyncStepper.Create</para>
+     * <para>Configure NModel ct with <c>/r:RemoteStepper.dll /iut:RemoteStepper.AsyncStepper.Create</c></para>
      * </remarks>
+     * <seealso cref="AsyncStepper"/>
      */
     public class Stepper: IStepper
     {
