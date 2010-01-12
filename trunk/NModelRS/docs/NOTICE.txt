@@ -21,7 +21,7 @@
       Morgan-Kaufmann 2006.
       (http://www.cs.waikato.ac.nz/~marku/mbt/)
 
-   The SP model was inspired by the SP protocol in the book
+   The SP Java implementation is based on the SP protocol in the book
       Model-based Software Testing and Analysis with C#. 
       Jonathan Jacky, Margus Veanes, Colin Campbell, Wolfram Schulte.
       Cambridge University Press, 2008. 
