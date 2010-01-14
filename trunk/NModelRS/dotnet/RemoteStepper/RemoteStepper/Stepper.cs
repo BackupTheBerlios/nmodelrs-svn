@@ -38,7 +38,7 @@ namespace RemoteStepper
      * supporting remote test harness in other languages,
      * e.g., Java, see <a href="http://hippogrif.dk/sw/nmodel">NModelRS</a>.
      * </para>
-     * <para>Configure NModel ct with <c>/r:RemoteStepper.dll /iut:RemoteStepper.AsyncStepper.Create</c></para>
+     * <para>Configure NModel ct with <c>/r:RemoteStepper.dll /iut:RemoteStepper.Stepper.Create</c></para>
      * </remarks>
      * <seealso cref="AsyncStepper"/>
      */
