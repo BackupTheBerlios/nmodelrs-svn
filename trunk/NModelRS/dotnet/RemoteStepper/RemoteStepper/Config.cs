@@ -17,12 +17,12 @@ using System.IO;
 using System.Reflection;
 using System.Xml.Linq;
 
-namespace RemoteStepper
+namespace RemoteStepperProxy
 {
     /**
      * <summary>
-     * Configures remote stepper from XML file <i>RemoteStepper.dll.conf</i> in same
-     * directory as <i>RemoteStepper.dll</i>. 
+     * Configures remote stepper from XML file <i>RemoteStepperProxy.dll.conf</i> in same
+     * directory as <i>RemoteStepperProxy.dll</i>. 
      * <para>If the conf file (shown below) is not present the following default values are used</para>
      * <code>
      * &lt;configuration&gt;
@@ -35,8 +35,8 @@ namespace RemoteStepper
      * &lt;/configuration&gt;
      * </code>
      * <list type="bullet">
-     * <item><see cref="Stepper"/> opens a TCP connection to <c>host:port</c>.</item>
-     * <item><see cref="AsyncStepper"/> listens on <c>asyncPort</c>.</item>
+     * <item><see cref="Stepper"/> opens a TCP connection to a remote stepper at <c>host:port</c>.</item>
+     * <item><see cref="AsyncStepper"/> listens on <c>asyncPort</c> for observed actions.</item>
      * <item><c>bufferSize</c> must be able to hold any received message or datagram.</item>
      * <item><c>Reset</c> after test case may be delayed until start of next test case.</item>
      * <item>activity is logged on console iff <c>logEnabled</c> is True.</item>
@@ -44,7 +44,7 @@ namespace RemoteStepper
      * </summary>
      * <remarks>
      * <para>
-     * RemoteStepper is a <a href="http://nmodel.codeplex.com/">NModel</a> stepper 
+     * RemoteStepperProxy is a <a href="http://nmodel.codeplex.com/">NModel</a> stepper 
      * supporting remote test harness in other languages,
      * e.g., Java, see <a href="http://hippogrif.dk/sw/nmodel">NModelRS</a>.
      * </para>

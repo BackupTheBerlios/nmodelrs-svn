@@ -14,11 +14,11 @@
 */
 
 import atm.NewATM;
-import dk.hippogrif.nmodel.stepper.FileStepper;
-import dk.hippogrif.nmodel.stepper.NModelException;
-import dk.hippogrif.nmodel.stepper.Observer;
-import dk.hippogrif.nmodel.stepper.RemoteStepper;
-import dk.hippogrif.nmodel.stepper.Stepper;
+import dk.hippogrif.nmodel.FileStepper;
+import dk.hippogrif.nmodel.NModelException;
+import dk.hippogrif.nmodel.Observer;
+import dk.hippogrif.nmodel.RemoteStepper;
+import dk.hippogrif.nmodel.Stepper;
 import java.awt.Frame;
 import java.awt.Menu;
 import java.awt.MenuBar;

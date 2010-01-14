@@ -21,10 +21,10 @@ Build of NModel remote stepper
     <exec executable="msbuild" dir="dotnet/RemoteStepper"/>
     <ant dir="${src.dir}/java/NModel" target="jar" output="build.log" inheritAll="false"/>
     <mkdir dir="${build.bin}"/>
-    <copy todir="${build.bin}" file="${src.dir}/dotnet/RemoteStepper/bin/RemoteStepper.dll"/>
-    <copy todir="${build.bin}" file="${src.dir}/dotnet/RemoteStepper/bin/RemoteStepper.pdb"/>
-    <copy todir="${build.bin}" file="${src.dir}/dotnet/RemoteStepper/bin/RemoteStepper.XML"/>
-    <copy todir="${build.bin}" file="${src.dir}/dotnet/RemoteStepper/RemoteStepper/RemoteStepper.dll.conf"/>
+    <copy todir="${build.bin}" file="${src.dir}/dotnet/RemoteStepper/bin/RemoteStepperProxy.dll"/>
+    <copy todir="${build.bin}" file="${src.dir}/dotnet/RemoteStepper/bin/RemoteStepperProxy.pdb"/>
+    <copy todir="${build.bin}" file="${src.dir}/dotnet/RemoteStepper/bin/RemoteStepperProxy.XML"/>
+    <copy todir="${build.bin}" file="${src.dir}/dotnet/RemoteStepper/RemoteStepper/RemoteStepperProxy.dll.conf"/>
     <copy todir="${build.bin}" file="${src.dir}/java/NModel/dist/NModel.jar"/>
     <copy todir="${build.bin}" file="${src.dir}/java/NModel/logging.properties"/>
     <copy todir="${build.bin}" file="${src.dir}/env.bat"/>
@@ -35,7 +35,7 @@ Build of NModel remote stepper
   <target name="doc" depends="init" description="Create documentation in doc dir">
     <mkdir dir="${build.doc}"/>
     <mkdir dir="${build.doc}/csdoc"/>
-    <xslt classpath="lib/saxon9he.jar" style="${src.dir}/docs/cs-xml/doc.xsl" in="${src.dir}/dotnet/RemoteStepper/bin/RemoteStepper.XML" out="${build.doc}/csdoc/RemoteStepper.html"/>
+    <xslt classpath="lib/saxon9he.jar" style="${src.dir}/docs/cs-xml/doc.xsl" in="${src.dir}/dotnet/RemoteStepper/bin/RemoteStepperProxy.XML" out="${build.doc}/csdoc/RemoteStepperProxy.html"/>
     <copy todir="${build.doc}/csdoc" file="${src.dir}/docs/cs-xml/doc.css"/>
     <!-- NModel javadoc -->
     <delete dir="${src.dir}/java/NModel/dist/javadoc"/>

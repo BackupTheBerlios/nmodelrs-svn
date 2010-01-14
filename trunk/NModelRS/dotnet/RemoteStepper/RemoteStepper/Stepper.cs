@@ -17,7 +17,7 @@ using System;
 using NModel.Conformance;
 using NModel.Terms;
 
-namespace RemoteStepper
+namespace RemoteStepperProxy
 {
     /**
      * <summary>
@@ -34,11 +34,11 @@ namespace RemoteStepper
      * </summary>
      * <remarks>
      * <para>
-     * RemoteStepper is a <a href="http://nmodel.codeplex.com/">NModel</a> stepper 
+     * RemoteStepperProxy is a <a href="http://nmodel.codeplex.com/">NModel</a> stepper 
      * supporting remote test harness in other languages,
      * e.g., Java, see <a href="http://hippogrif.dk/sw/nmodel">NModelRS</a>.
      * </para>
-     * <para>Configure NModel ct with <c>/r:RemoteStepper.dll /iut:RemoteStepper.Stepper.Create</c></para>
+     * <para>Configure NModel ct with <c>/r:RemoteStepperProxy.dll /iut:RemoteStepperProxy.Stepper.Create</c></para>
      * </remarks>
      * <seealso cref="AsyncStepper"/>
      */

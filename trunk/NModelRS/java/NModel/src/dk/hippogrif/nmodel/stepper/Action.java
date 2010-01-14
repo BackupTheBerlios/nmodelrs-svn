@@ -13,7 +13,7 @@
    limitations under the License.
 */
 
-package dk.hippogrif.nmodel;
+package dk.hippogrif.nmodel.stepper;
 
 /**
  * Action is a tree of terms representing function symbols and parameters.

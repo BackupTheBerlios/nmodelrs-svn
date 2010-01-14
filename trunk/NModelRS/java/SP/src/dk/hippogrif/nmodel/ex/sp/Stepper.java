@@ -1,9 +1,9 @@
 package dk.hippogrif.nmodel.ex.sp;
 
-import dk.hippogrif.nmodel.Action;
-import dk.hippogrif.nmodel.NModelException;
-import dk.hippogrif.nmodel.Observer;
-import dk.hippogrif.nmodel.RemoteStepper;
+import dk.hippogrif.nmodel.stepper.Action;
+import dk.hippogrif.nmodel.stepper.NModelException;
+import dk.hippogrif.nmodel.stepper.Observer;
+import dk.hippogrif.nmodel.stepper.RemoteStepper;
 import java.util.logging.Logger;
 
 /**

@@ -1,7 +1,7 @@
 # online conformance test of ATM
 # the java remote stepper must be running (NModelRS/java/ATM/test/run)
-/iut:RemoteStepper.Stepper.Create
-/r:..\\..\\..\\bin\\RemoteStepper.dll
+/iut:RemoteStepperProxy.Stepper.Create
+/r:..\\..\\..\\bin\\RemoteStepperProxy.dll
 /r:..\\bin\\ATM.dll
 /fsm:fsm_card1.txt
 /fsm:fsm_cash.txt

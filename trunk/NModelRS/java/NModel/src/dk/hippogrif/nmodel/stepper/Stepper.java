@@ -13,7 +13,7 @@
    limitations under the License.
 */
 
-package dk.hippogrif.nmodel;
+package dk.hippogrif.nmodel.stepper;
 
 /**
  * Used  by test harness to read test actions and write replies.

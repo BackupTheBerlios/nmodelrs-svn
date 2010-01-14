@@ -16,9 +16,9 @@
 using System.Net;
 using System.Net.Sockets;
 using System.Threading;
-using System.Text; 
+using System.Text;
 
-namespace RemoteStepper
+namespace RemoteStepperProxy
 {
     class Client
     {

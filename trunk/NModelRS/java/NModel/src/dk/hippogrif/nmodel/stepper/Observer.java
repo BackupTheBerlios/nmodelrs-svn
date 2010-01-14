@@ -13,7 +13,7 @@
    limitations under the License.
 */
 
-package dk.hippogrif.nmodel;
+package dk.hippogrif.nmodel.stepper;
 
 import java.io.IOException;
 import java.net.DatagramPacket;

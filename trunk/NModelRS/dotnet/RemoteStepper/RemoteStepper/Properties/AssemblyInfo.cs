@@ -20,11 +20,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("RemoteStepper")]
+[assembly: AssemblyTitle("RemoteStepperProxy")]
 [assembly: AssemblyDescription("NModel stepper for remote test harness")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("hippogrif.dk/sw/nmodel")]
-[assembly: AssemblyProduct("RemoteStepper")]
+[assembly: AssemblyProduct("RemoteStepperProxy")]
 [assembly: AssemblyCopyright("Copyright © Jesper Gørtz 2010")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

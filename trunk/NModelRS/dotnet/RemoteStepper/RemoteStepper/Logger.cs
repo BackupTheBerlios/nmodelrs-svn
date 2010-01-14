@@ -15,11 +15,11 @@
 
 using System;
 
-namespace RemoteStepper
+namespace RemoteStepperProxy
 {
     static class Logger
     {
-        const string name = "RemoteStepper: ";
+        const string name = "RemoteStepperProxy: ";
 
         public static void log(string s)
         {

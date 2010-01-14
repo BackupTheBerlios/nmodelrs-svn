@@ -8,8 +8,8 @@
     <ProjectGuid>{71E293C9-D229-48F9-8188-32D546B23992}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>RemoteStepper</RootNamespace>
-    <AssemblyName>RemoteStepper</AssemblyName>
+    <RootNamespace>RemoteStepperProxy</RootNamespace>
+    <AssemblyName>RemoteStepperProxy</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -21,7 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>..\bin\RemoteStepper.XML</DocumentationFile>
+    <DocumentationFile>..\bin\RemoteStepperProxy.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -30,7 +30,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>..\bin\RemoteStepper.XML</DocumentationFile>
+    <DocumentationFile>..\bin\RemoteStepperProxy.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="NModel, Version=1.0.21029.0, Culture=neutral, PublicKeyToken=1ab4cd1a09bd7aa7, processorArchitecture=MSIL" />
