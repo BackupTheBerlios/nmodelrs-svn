@@ -49,7 +49,7 @@
       <zipfileset dir="${src.dir}/docs"  prefix="NModelRS" includes="*.*"/>
       <zipfileset dir="${build.doc}" prefix="NModelRS/doc"/>
       <zipfileset dir="${build.bin}" prefix="NModelRS/bin"/>
-      <zipfileset dir="${src.dir}/dotnet/RemoteStepper" prefix="NModelRS/dotnet/RemoteStepper" excludes="bin/**,RemoteStepperProxy/obj/**,RemoteStepper.suo"/>
+      <zipfileset dir="${src.dir}/dotnet/RemoteStepper" prefix="NModelRS/dotnet/RemoteStepper" excludes="bin/**,RemoteStepperProxy/obj/**,*.suo,*.cache"/>
       <zipfileset dir="${src.dir}/java/NModel" prefix="NModelRS/java/NModel" includes="logging.properties,src/**"/>
       <zipfileset dir="${src.dir}/dotnet/ATM" prefix="NModelRS/dotnet/ATM" includes="ATM.sln,ATM/*.*,ATM/Properties/*,bin/ATM.*,test/**" excludes="**/env.bat"/>
       <zipfileset dir="${src.dir}/java/ATM" prefix="NModelRS/java/ATM" includes="dist/**,src/**,test/**" excludes="dist/README.TXT"/>
