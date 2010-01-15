@@ -12,6 +12,7 @@
 
 <test> is one of
 
+	cancel	custCancel when waitingForAnotherTrans
 	card1	transactions with 
 		- card 1 with two accounts: CHECKING $100, SAVINGS $1000
 		- correct pin code

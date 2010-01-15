@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="NModelRS" default="dist" basedir=".">
 
-  <description>
-Build of NModel remote stepper
-  </description>
+  <description>Build of NModel Remote Stepper</description>
 
   <property name="version" value="1.0.0"/>
 
@@ -24,7 +22,7 @@ Build of NModel remote stepper
     <copy todir="${build.bin}" file="${src.dir}/dotnet/RemoteStepper/bin/RemoteStepperProxy.dll"/>
     <copy todir="${build.bin}" file="${src.dir}/dotnet/RemoteStepper/bin/RemoteStepperProxy.pdb"/>
     <copy todir="${build.bin}" file="${src.dir}/dotnet/RemoteStepper/bin/RemoteStepperProxy.XML"/>
-    <copy todir="${build.bin}" file="${src.dir}/dotnet/RemoteStepper/RemoteStepper/RemoteStepperProxy.dll.conf"/>
+    <copy todir="${build.bin}" file="${src.dir}/dotnet/RemoteStepper/RemoteStepperProxy/RemoteStepperProxy.dll.conf"/>
     <copy todir="${build.bin}" file="${src.dir}/java/NModel/dist/NModel.jar"/>
     <copy todir="${build.bin}" file="${src.dir}/java/NModel/logging.properties"/>
     <copy todir="${build.bin}" file="${src.dir}/env.bat"/>
@@ -51,7 +49,7 @@ Build of NModel remote stepper
       <zipfileset dir="${src.dir}/docs"  prefix="NModelRS" includes="*.*"/>
       <zipfileset dir="${build.doc}" prefix="NModelRS/doc"/>
       <zipfileset dir="${build.bin}" prefix="NModelRS/bin"/>
-      <zipfileset dir="${src.dir}/dotnet/RemoteStepper" prefix="NModelRS/dotnet/RemoteStepper" excludes="bin/**,RemoteStepper/obj/**,RemoteStepper.suo"/>
+      <zipfileset dir="${src.dir}/dotnet/RemoteStepper" prefix="NModelRS/dotnet/RemoteStepper" excludes="bin/**,RemoteStepperProxy/obj/**,RemoteStepper.suo"/>
       <zipfileset dir="${src.dir}/java/NModel" prefix="NModelRS/java/NModel" includes="logging.properties,src/**"/>
       <zipfileset dir="${src.dir}/dotnet/ATM" prefix="NModelRS/dotnet/ATM" includes="ATM.sln,ATM/*.*,ATM/Properties/*,bin/ATM.*,test/**" excludes="**/env.bat"/>
       <zipfileset dir="${src.dir}/java/ATM" prefix="NModelRS/java/ATM" includes="dist/**,src/**,test/**" excludes="dist/README.TXT"/>
@@ -64,11 +62,19 @@ Build of NModel remote stepper
     <exec executable="msbuild" dir="dotnet/ATM/ATM">
       <arg value="ATM.csproj"/>
     </exec>
-    <ant dir="${src.dir}/java/ATM" target="jar" output="build.log" inheritAll="false"/>
+    <ant dir="${src.dir}/java/ATM" target="jar" output="build.log" inheritAll="false">
+      <propertyset id="my-set">
+        <propertyref prefix="libs.CopyLibs.classpath"/>
+      </propertyset>
+    </ant>
   </target>
 
   <target name="sp" depends="init" description="Build sp example">
-    <ant dir="${src.dir}/java/SP" target="jar" output="build.log" inheritAll="false"/>
+    <ant dir="${src.dir}/java/SP" target="jar" output="build.log" inheritAll="false">
+      <propertyset id="my-set">
+        <propertyref prefix="libs.CopyLibs.classpath"/>
+      </propertyset>
+    </ant>
   </target>
 
   <target name="binaries" depends="init,bin,atm,sp" description="Build binaries"/>
@@ -102,7 +108,7 @@ Build of NModel remote stepper
     <delete dir="dotnet/bin"/>
     <delete file="dotnet/RemoteStepper/*.suo"/>
     <delete dir="dotnet/RemoteStepper/bin"/>
-    <delete dir="dotnet/RemoteStepper/RemoteStepper/obj"/>
+    <delete dir="dotnet/RemoteStepper/RemoteStepperProxy/obj"/>
     <delete file="dotnet/ATM/*.suo"/>
     <delete dir="dotnet/ATM/bin"/>
     <delete dir="dotnet/ATM/ATM/obj"/>
