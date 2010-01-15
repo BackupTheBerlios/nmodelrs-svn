@@ -1,0 +1,10 @@
+﻿FSM(0, AcceptingStates(0),
+Transitions(
+t(0, doTransaction(), 1),
+t(0, custCancelTrans_Finish(MSG("CANCEL_TRANS")), 1),
+t(1, custCancel, 0),
+t(0, custSelectTrans_Start(TRANS_TYPE("TRANSFER")), 0)
+),
+Vocabulary("doTransaction","custCancelTrans_Finish","custCancel","custSelectTrans_Start",
+"custAnotherTrans")
+)
