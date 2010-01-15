@@ -10,6 +10,7 @@
   <property name="build.bin" location="${build.dir}/bin"/>
   <property name="build.doc" location="${build.dir}/doc"/>
   <property name="build.dist" location="${build.dir}/dist"/>
+  <property name="build.homepage" location="${build.dir}/homepage"/>
 
   <target name="init">
     <tstamp/>
@@ -41,6 +42,15 @@
     <copy todir="${build.doc}">
       <fileset dir="${src.dir}/java/NModel/dist" includes="javadoc/**"/>
     </copy>
+  </target>
+
+  <target name="homepage" depends="init" description="Create home page - needs doc">
+    <mkdir dir="${build.homepage}"/>
+    <copy todir="${build.homepage}">
+      <fileset dir="${build.doc}" includes="javadoc/**,csdoc/**"/>
+      <fileset dir="${src.dir}/docs/homePage" excludes=".svn"/>
+    </copy>
+    <move file="${build.homepage}/intro.html" toFile="${build.homepage}/index.html"/>
   </target>
 
   <target name="dist" depends="init" description="Create distribution archive">
@@ -79,7 +89,7 @@
 
   <target name="binaries" depends="init,bin,atm,sp" description="Build binaries"/>
 
-  <target name="all" depends="init,binaries,doc,dist" description="Build all"/>
+  <target name="all" depends="init,binaries,doc,dist,homepage" description="Build all"/>
 
   <target name="clean.binaries" description="Remove built binaries">
     <delete dir="${build.bin}"/>
@@ -98,15 +108,20 @@
     <delete dir="${build.doc}"/>
   </target>
 
+  <target name="clean.homepage" description="Remove built homepage">
+    <delete dir="${build.homepage}"/>
+  </target>
+
   <target name="clean.dist" description="Remove dist files">
     <delete dir="${build.dist}"/>
   </target>
 
-  <target name="clean" depends="clean.binaries,clean.doc,clean.dist"/>
+  <target name="clean" depends="clean.binaries,clean.doc,clean.dist,clean.homepage"/>
 
   <target name="very.clean" depends="clean">
     <delete dir="dotnet/bin"/>
     <delete file="dotnet/RemoteStepper/*.suo"/>
+    <delete file="dotnet/RemoteStepper/*.cache"/>
     <delete dir="dotnet/RemoteStepper/bin"/>
     <delete dir="dotnet/RemoteStepper/RemoteStepperProxy/obj"/>
     <delete file="dotnet/ATM/*.suo"/>
