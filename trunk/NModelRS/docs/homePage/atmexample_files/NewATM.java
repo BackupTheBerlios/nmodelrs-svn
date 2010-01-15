@@ -15,7 +15,7 @@
 
 package atm;
 
-import dk.hippogrif.nmodel.NModelException;
+import dk.hippogrif.nmodel.stepper.NModelException;
 import java.net.InetAddress;
 import java.util.logging.Logger;
 
