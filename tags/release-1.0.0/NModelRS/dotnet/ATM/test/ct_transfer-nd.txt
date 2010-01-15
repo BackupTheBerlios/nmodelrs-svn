@@ -1,0 +1,14 @@
+# online conformance test of ATM with unknown bank implementation (shallow non-determinism)
+# the java remote asynchronous stepper must be running (NModelRS/java/ATM/test/run-async)
+/iut:RemoteStepperProxy.AsyncStepper.Create
+/r:..\\..\\..\\bin\\RemoteStepperProxy.dll
+/r:..\\bin\\ATM.dll
+/fsm:fsm_card1.txt
+/fsm:fsm_transfer.txt
+/fsm:fsm_wait.txt
+ATM.Factory.Create
+/o:message
+/runs:1
+/steps:1000
+/continueOnFailure-
+/logfile:ct_transfer-nd.log

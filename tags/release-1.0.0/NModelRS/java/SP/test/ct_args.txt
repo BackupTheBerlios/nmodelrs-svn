@@ -1,0 +1,18 @@
+#references  
+/r:..\\..\\..\\dotnet\\SP\\bin\\SP.dll
+/r:..\\..\\..\\bin\\RemoteStepperProxy.dll
+# using RemoteStepperProxy.dll.conf where RemoteStepperProxy.dll is
+
+#model program
+SP.OTFTest.Make 
+#fsm for the wait action
+/fsm:wait-fsm.txt
+
+#implementation stepper
+/iut:RemoteStepperProxy.AsyncStepper.Create
+  
+#observable actions
+/o:ResWork /o:ResSetup
+
+/continueOnFailure+
+/runs:2

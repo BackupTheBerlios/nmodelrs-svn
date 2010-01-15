@@ -1,0 +1,12 @@
+﻿FSM(0, AcceptingStates(0),Transitions(
+t(0, setCash_Start(10), 0),
+t(0, custInsertCard_Start(1), 0),
+t(0, custEnterPin_Start(42), 0),
+t(0, custSelectTrans_Start(TRANS_TYPE("WITHDRAWAL")), 0),
+t(0, custEnterAmountW(200), 0),
+t(0, doTransaction(true), 0),
+t(0, custCancelTrans_Start(), 0)
+),Vocabulary("setCash_Start","custInsertCard_Start","custEnterPin_Start","custSelectTrans_Start",
+  "custEnterAmountW","doTransaction","custCancelTrans_Start",
+"custCancel"
+))

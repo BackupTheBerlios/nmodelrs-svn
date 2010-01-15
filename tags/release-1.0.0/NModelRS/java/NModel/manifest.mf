@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+
+Name: dk/hippogrif/nmodel
+Version: 1.0.0

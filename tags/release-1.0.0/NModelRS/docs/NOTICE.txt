@@ -1,0 +1,30 @@
+   =========================================================================
+   ==  NOTICE file corresponding to the section 4 d of                    ==
+   ==  the Apache License, Version 2.0,                                   ==
+   ==  in this case for the NModelRS distribution.                        ==
+   =========================================================================
+
+   NModelRS
+   Copyright 2010 Jesper Gørtz (http://hippogrif.dk/sw/nmodel)
+
+   This product is based on the NModel software developed by
+      Microsoft Research (http://nmodel.codeplex.com/).
+
+   The ATMExample was developed by Russell C. Bjork 
+      (http://www.math-cs.gordon.edu/courses/cps211/ATMExample/index.html)
+   The source for the included ATMExample.jar may be found at
+      http://www.math-cs.gordon.edu/courses/cps211/atmexample.tar
+
+   The ATM model was inspired by The ATM Case Study in the book
+      Practical Model-Based Testing: A Tools Approach.
+      Mark Utting and Bruno Legeard,
+      Morgan-Kaufmann 2006.
+      (http://www.cs.waikato.ac.nz/~marku/mbt/)
+
+   The SP Java implementation is based on the SP protocol in the book
+      Model-based Software Testing and Analysis with C#. 
+      Jonathan Jacky, Margus Veanes, Colin Campbell, Wolfram Schulte.
+      Cambridge University Press, 2008. 
+      (http://staff.washington.edu/jon/modeling-book/)
+   The source for the included SP assembly may be found in Samples.zip at
+      http://nmodel.codeplex.com/wikipage?title=NModel%20Examples&referringTitle=Home

@@ -1,0 +1,12 @@
+﻿FSM(0, AcceptingStates(10), Transitions(
+t(0, createAccount(Account(1),1,ACCT_TYPE("CHECKING"),10000), 1), 
+t(1, createAccount(Account(2),2,ACCT_TYPE("SAVINGS"),100000), 2), 
+t(2, createAccount(Account(3),3,ACCT_TYPE("MONEYMARKET"),500000), 3), 
+t(3, createCard(Card(1),1,42), 4), 
+t(4, linkCardAccount(1,1), 5), 
+t(5, linkCardAccount(1,2), 6), 
+t(6, createCard(Card(2),2,1234), 7), 
+t(7, linkCardAccount(2,1), 8), 
+t(8, linkCardAccount(2,3), 9),
+t(9, init(), 10)
+))

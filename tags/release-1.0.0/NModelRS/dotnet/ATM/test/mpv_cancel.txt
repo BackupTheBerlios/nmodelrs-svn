@@ -1,0 +1,8 @@
+/r:..\\bin\\ATM.dll
+ATM.Factory.CreatePinOkDeterministic
+/fsm:fsm_card1.txt
+/fsm:fsm_cash.txt
+/fsm:fsm_amount.txt
+/fsm:fsm_cancel.txt
+/maxTransitions:1000
+/livenessCheckIsOn+

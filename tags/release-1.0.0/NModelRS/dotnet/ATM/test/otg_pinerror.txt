@@ -1,0 +1,5 @@
+/r:..\\bin\\ATM.dll
+ATM.Factory.CreateDeterministic
+/fsm:fsm_card1.txt
+/fsm:fsm_pinerror.txt
+/file:testsuite_pinerror.txt
